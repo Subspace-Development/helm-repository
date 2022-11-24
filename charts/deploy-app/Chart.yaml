@@ -1,6 +1,6 @@
 apiVersion: v2
 name: deploy-app
-description: A Helm chart for Kubernetes
+description: Deploy sample nginx app with ingress configuration.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

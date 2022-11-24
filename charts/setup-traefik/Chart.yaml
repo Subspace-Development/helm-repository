@@ -1,6 +1,6 @@
 apiVersion: v2
 name: setup-traefik
-description: A Helm chart for Kubernetes
+description: Setup ingress and certificates for traefik/traefik dashboard.
 
 # A chart can be either an 'application' or a 'library' chart.
 #

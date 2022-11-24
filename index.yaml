@@ -3,9 +3,9 @@ entries:
   deploy-app:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2022-11-24T17:21:49.904133707-06:00"
-    description: A Helm chart for Kubernetes
-    digest: 272de15acaa0d425f70531ac5edec7995ee7f9fff22764fbf671a653b3f9a926
+    created: "2022-11-24T17:31:04.452507947-06:00"
+    description: Deploy sample nginx app with ingress configuration.
+    digest: 5ba1c3388d729cd6eb161b068fad3e11900e9431318e1fb2678e87f2653d3cb0
     name: deploy-app
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   setup-grafana:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2022-11-24T17:21:49.904302356-06:00"
-    description: A Helm chart for Kubernetes
-    digest: c7df0b95830664fa095258618d2a671bad927683d936023a445a0a30005b3e65
+    created: "2022-11-24T17:31:04.452646456-06:00"
+    description: Setup traefik IngressRoutes for grafana with optional ssl.
+    digest: b3eda7f4a2b4f4bad0130d685aa534f926383fd582de7a8529b078cf2f1d0383
     name: setup-grafana
     type: application
     urls:
@@ -25,12 +25,12 @@ entries:
   setup-traefik:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2022-11-24T17:21:49.904492234-06:00"
-    description: A Helm chart for Kubernetes
-    digest: 69c823c584d6bc7aeb24696920662c7ba44d0b19823c3ec3e65570757c5ac4a1
+    created: "2022-11-24T17:31:04.452805714-06:00"
+    description: Setup ingress and certificates for traefik/traefik dashboard.
+    digest: 1b92f57314dd103ff6dd986124937cd1b006936c45205a73942eb66553a6d86d
     name: setup-traefik
     type: application
     urls:
     - https://subspace-development.github.io/helm-repository/setup-traefik-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-24T17:21:49.903435784-06:00"
+generated: "2022-11-24T17:31:04.45224124-06:00"

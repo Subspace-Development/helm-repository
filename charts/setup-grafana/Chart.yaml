@@ -1,6 +1,6 @@
 apiVersion: v2
 name: setup-grafana
-description: A Helm chart for Kubernetes
+description: Setup traefik IngressRoutes for grafana with optional ssl.
 
 # A chart can be either an 'application' or a 'library' chart.
 #
