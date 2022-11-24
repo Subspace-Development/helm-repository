@@ -1,0 +1,20 @@
+{{- if .Values.ingress.enabled -}}
+{{- if .Values.ingress.tls -}}
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: traefik-certificate
+  namespace: {{ .Release.namespace }}
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "5"
+spec:
+  secretName: traefik-certificate
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: {{ .Values.ingress.hostname }}
+  dnsNames:
+    - {{ .Values.ingress.hostname }}
+{{- end}}
+{{- end}}

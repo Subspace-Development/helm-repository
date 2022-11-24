@@ -1,0 +1,40 @@
+{{- if .Values.ingress.enabled }}
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: application
+  namespace: app
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: Host(`{{ .Values.ingress.hostname }}`)
+      services:
+        - name: nginx-demo
+          port: 80
+      {{- if .Values.ingress.tls }}
+      middlewares:
+        - name: redirect-https
+          namespace: app
+      {{- end }}
+---
+{{- if .Values.ingress.tls }}
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: application-ssl
+  namespace: app
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`{{ .Values.ingress.hostname }}`)
+      services:
+        - name: nginx-demo
+          port: 80
+  tls:
+    secretName: app
+{{- end }}
+{{- end }}

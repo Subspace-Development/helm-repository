@@ -1,0 +1,40 @@
+{{- if .Values.ingress.enabled }}
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: grafana
+  namespace: {{ .Release.namespace }}
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: Host(`{{ .Values.ingress.hostname }}`)
+      services:
+        - name: prometheus-grafana
+          port: 80
+      {{- if .Values.ingress.tls }}
+      middlewares:
+        - name: redirect-https
+          namespace: {{ .Release.namespace }}
+      {{- end }}
+---
+{{- if .Values.ingress.tls }}
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: grafana-ssl
+  namespace: {{ .Release.namespace }}
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`{{ .Values.ingress.hostname }}`)
+      services:
+        - name: prometheus-grafana
+          port: 80
+  tls:
+    secretName: grafana-certificate
+{{- end }}
+{{- end }}
