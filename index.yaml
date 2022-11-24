@@ -1,0 +1,36 @@
+apiVersion: v1
+entries:
+  deploy-app:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-11-24T17:21:49.904133707-06:00"
+    description: A Helm chart for Kubernetes
+    digest: 272de15acaa0d425f70531ac5edec7995ee7f9fff22764fbf671a653b3f9a926
+    name: deploy-app
+    type: application
+    urls:
+    - https://subspace-development.github.io/helm-repository/deploy-app-0.1.0.tgz
+    version: 0.1.0
+  setup-grafana:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-11-24T17:21:49.904302356-06:00"
+    description: A Helm chart for Kubernetes
+    digest: c7df0b95830664fa095258618d2a671bad927683d936023a445a0a30005b3e65
+    name: setup-grafana
+    type: application
+    urls:
+    - https://subspace-development.github.io/helm-repository/setup-grafana-0.1.0.tgz
+    version: 0.1.0
+  setup-traefik:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-11-24T17:21:49.904492234-06:00"
+    description: A Helm chart for Kubernetes
+    digest: 69c823c584d6bc7aeb24696920662c7ba44d0b19823c3ec3e65570757c5ac4a1
+    name: setup-traefik
+    type: application
+    urls:
+    - https://subspace-development.github.io/helm-repository/setup-traefik-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-11-24T17:21:49.903435784-06:00"
