@@ -1,0 +1,10 @@
+# Default values for setup-traefik.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+ingress:
+  enabled: true
+  hostname: lb.ssd-dev.subspacedev.io
+  tls: true
+  traefikUser: YWRtaW46JGFwcjEkQ0JubDZBL00kSE1HUXFZaW9YVkRNeS5ReVhZcUxWMAoK
+  letsencryptUser: redstoneeditor@gmail.com

@@ -1,0 +1,8 @@
+# Default values for setup-traefik.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+ingress:
+  enabled: true
+  hostname: grafana.ssd-dev.subspacedev.io
+  tls: true

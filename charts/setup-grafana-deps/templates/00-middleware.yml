@@ -5,9 +5,6 @@ kind: Middleware
 metadata:
   name: redirect-https
   namespace: {{ .Release.namespace }}
-  annotations:
-    "helm.sh/hook": pre-install
-    "helm.sh/hook-weight": "1"
 spec:
   redirectScheme:
     scheme: https

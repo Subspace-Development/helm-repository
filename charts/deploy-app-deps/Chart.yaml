@@ -1,5 +1,5 @@
 apiVersion: v2
-name: deploy-app
+name: deploy-app-deps
 description: Deploy sample nginx app with ingress configuration.
 
 # A chart can be either an 'application' or a 'library' chart.
