@@ -4,7 +4,7 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: redirect-https
-    namespace: {{ .Release.namespace }}
+  namespace: {{ .Release.namespace }}
   annotations:
     "helm.sh/hook": pre-install
     "helm.sh/hook-weight": "1"
