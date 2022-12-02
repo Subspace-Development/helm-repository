@@ -3,6 +3,16 @@ entries:
   deploy-app:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2022-12-02T07:10:41.126566298Z"
+    description: Deploy sample nginx app with ingress configuration.
+    digest: def87e4b3249e47bf049e518877d72927e5076bc4ecc2445c5f9152d058959bb
+    name: deploy-app
+    type: application
+    urls:
+    - https://github.com/Subspace-Development/helm-repository/releases/download/deploy-app-0.1.2/deploy-app-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2022-11-24T17:31:04.452507947-06:00"
     description: Deploy sample nginx app with ingress configuration.
     digest: 5ba1c3388d729cd6eb161b068fad3e11900e9431318e1fb2678e87f2653d3cb0
@@ -14,6 +24,16 @@ entries:
   setup-grafana:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2022-12-02T07:10:41.273043805Z"
+    description: Setup traefik IngressRoutes for grafana with optional ssl.
+    digest: 5160a528dd360dfccdae4998c2e9ea3013630fe295d81ea8f8852ccc545b404b
+    name: setup-grafana
+    type: application
+    urls:
+    - https://github.com/Subspace-Development/helm-repository/releases/download/setup-grafana-0.1.2/setup-grafana-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2022-11-24T17:31:04.452646456-06:00"
     description: Setup traefik IngressRoutes for grafana with optional ssl.
     digest: b3eda7f4a2b4f4bad0130d685aa534f926383fd582de7a8529b078cf2f1d0383
@@ -23,6 +43,16 @@ entries:
     - https://subspace-development.github.io/helm-repository/setup-grafana-0.1.0.tgz
     version: 0.1.0
   setup-traefik:
+  - apiVersion: v2
+    appVersion: 2.6.2
+    created: "2022-12-02T07:10:41.398504333Z"
+    description: Setup ingress and certificates for traefik/traefik dashboard.
+    digest: b62b9278aeceda2dcc61043438255f4562fdd924c769e51200617916f4d7fbe1
+    name: setup-traefik
+    type: application
+    urls:
+    - https://github.com/Subspace-Development/helm-repository/releases/download/setup-traefik-0.1.2/setup-traefik-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.0
     created: "2022-11-24T17:31:04.452805714-06:00"
