@@ -13,18 +13,6 @@ spec:
     scheme: https
     permanent: true
 ---
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: traefik-auth
-  namespace: {{ .Release.namespace }}
-  annotations:
-    "helm.sh/hook": pre-install
-    "helm.sh/hook-weight": "2"
-spec:
-  basicAuth:
-    secret: traefik-admin
----
 apiVersion: v1
 kind: Secret
 metadata:
@@ -32,8 +20,20 @@ metadata:
   namespace: {{ .Release.namespace }}
   annotations:
     "helm.sh/hook": pre-install
-    "helm.sh/hook-weight": "3"
+    "helm.sh/hook-weight": "2"
 data:
   users: {{ .Values.ingress.traefikUser}}
 {{- end }}
 {{- end }}
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: traefik-auth
+  namespace: {{ .Release.namespace }}
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "3"
+spec:
+  basicAuth:
+    secret: traefik-admin
